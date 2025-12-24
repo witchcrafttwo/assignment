@@ -29,6 +29,9 @@ public class Exp69_1 {
         } else {
             System.out.println("佐藤さんは見つかりませんでした");
         }
+        for(int i : listName) {
+            
+        }
 
     }
 }

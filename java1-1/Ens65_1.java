@@ -5,7 +5,7 @@ class Ens65_1 {
         Scanner scanner = new Scanner(System.in); // Scannerの変数を作成
 
         System.out.print("配列のサイズを入力してください: ");
-        int arraySize = __________; // ① int型の入力を受け取る
+        int arraySize = scanner.nextInt(); // ① int型の入力を受け取る
         
         // 入力されたサイズでint型配列を宣言
         int[] numbers = new int[arraySize];
@@ -14,8 +14,8 @@ class Ens65_1 {
 
         // ループを使って、各要素に数値を入力
         for (int i = 0; i < arraySize; ) {
-            if (scanner.__________) { // ② 入力をチェック
-                numbers[i] = __________; // ③ Scannerでint型の入力を受け取って配列に代入
+            if (scanner.hasNextInt()) { // ② 入力をチェック
+                numbers[i] =scanner.nextInt(); // ③ Scannerでint型の入力を受け取って配列に代入
                 i++; // 入力が正しければ次へ
             } else {
                 System.out.println("整数を入力してください。");
@@ -24,7 +24,7 @@ class Ens65_1 {
         }
 
         // 配列の内容を表示
-        System.out.println("入力された数値は:"); 
+        System.out.println("入力された数値は:");
 
 
 

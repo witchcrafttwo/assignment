@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Exp66_1 {
+
+	public static void main(String[] args) {
+
+		ArrayList<String> recipe = new ArrayList<>();	
+		
+		recipe.add("sugar");
+		recipe.add("butter");
+		recipe.add("fresh cream");
+		recipe.add("water");
+		
+		System.out.println(recipe);
+		
+				
+		ArrayList<String> recipe2 = new ArrayList<>(Arrays.asList(
+				"sugar", "butter", "fresh cream", "water")
+		);
+		
+		System.out.println(recipe2);
+		
+		recipe.add(2, "milk");
+		System.out.println(recipe);
+		
+		recipe.remove(3);
+		System.out.println(recipe);
+		
+		recipe.remove("butter");
+		System.out.println(recipe);
+		
+		recipe.set(0, "granulated sugar");
+		System.out.println(recipe);
+		
+		System.out.println("必要な材料は" + recipe.size() + "種類です");
+		
+		System.out.println("2つ目の材料：" + recipe.get(1));
+	}
+	
+}
