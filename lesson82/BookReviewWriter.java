@@ -1,5 +1,6 @@
 package lesson82;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
 class BookReviewWriter {
@@ -26,15 +27,15 @@ class BookReviewWriter {
             pw.println();
             
             // ArrayListの各要素をforeachで取り出してファイルに出力
-            for (________________) {
-                pw.println(___________________);
+            for (BookReview book : books) {
+                pw.println(book.getTitle()+":" + book.getReview());
             }
             
             pw.println("==============================");
             
             System.out.println("'" + fileName + "'に読書記録を保存しました。");
             
-        } catch (______________ e) {
+        } catch (IOException e) {
             System.err.println("ファイル書き込み中にエラーが発生しました。");
             e.printStackTrace();
         }
