@@ -12,8 +12,11 @@ class FileExample {
 		System.out.println("ファイルは存在するか: " + file.exists());
 		System.out.println("ファイル名: " + file.getName());
 		System.out.println("絶対パス: " + file.getAbsolutePath());
-
-		// file.createNewFile(); // ファイルを新規作成 (IOExceptionが発生する可能性あり)
+		try {
+			file.createNewFile();
+		} catch (Exception e) {
+		}
+		  // ファイルを新規作成 (IOExceptionが発生する可能性あり)
 		// file.delete();       // ファイルを削除
 
 	}
